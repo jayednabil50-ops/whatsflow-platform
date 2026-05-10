@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import type { Route } from "next";
 import { KeyRound, Loader2, ShieldCheck } from "lucide-react";
 import { DataTable } from "@/components/ui/data-table";
 
@@ -53,7 +54,7 @@ export default function ApiKeysPage() {
           </p>
         </div>
         <Link
-          href="/app/sessions/new"
+          href={"/app/sessions/new" as Route}
           className="focus-ring inline-flex items-center justify-center gap-2 rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-accent-foreground"
         >
           <KeyRound className="h-4 w-4" />
